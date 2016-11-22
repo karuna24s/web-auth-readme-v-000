@@ -1574,3 +1574,47 @@ Started GET "/friends" for ::1 at 2016-11-22 11:18:57 -0500
 Processing by SearchesController#friends as HTML
   Rendered searches/friends.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 265ms (Views: 178.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth" for ::1 at 2016-11-22 11:23:11 -0500
+Processing by SessionsController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 235ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-22 11:23:12 -0500
+Processing by SearchesController#search as HTML
+Redirected to https://foursquare.com/oauth2/authenticate?client_id=VXYDIP2CYJWJTAEUQ4QCHU5ON3RRPK3DYIEMPW5UFYEHLATF&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth?code=OILDVZA5DGIYOORDIWET12UISJ2AZRFGSIPQEJBBWVNOP022" for ::1 at 2016-11-22 11:23:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"OILDVZA5DGIYOORDIWET12UISJ2AZRFGSIPQEJBBWVNOP022"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 305ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-22 11:23:12 -0500
+Processing by SearchesController#search as HTML
+  Rendered searches/search.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-22 11:25:01 -0500
+Processing by SearchesController#search as HTML
+  Rendered searches/search.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 182ms (Views: 174.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for ::1 at 2016-11-22 11:25:09 -0500
+Processing by SearchesController#search as HTML
+  Rendered searches/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/friends" for ::1 at 2016-11-22 11:25:15 -0500
+Processing by SearchesController#friends as HTML
+  Rendered searches/friends.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 90ms (Views: 12.1ms | ActiveRecord: 0.0ms)
